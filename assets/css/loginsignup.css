@@ -1,0 +1,202 @@
+/*--------------------------------------- LOGIN MODAL ---------------------------------------*/ 
+
+.container{
+    background-color: black;
+    max-width: 900px;
+    height: 470px;
+}
+
+.title-login{
+    color: white;
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(3rem, 2vw, 6rem);
+}
+
+.rotated{
+    transform: rotate(-90deg);
+    max-width: 400px; 
+    height: 300px;
+}
+
+.login{
+    font-family: 'Syne', sans-serif;
+    color: rgb(241, 90, 36);
+}
+
+.boxes{
+    background-color: rgb(26,26,26);
+    color: white;
+    border-radius: 0%;
+    font-family: 'Syne', sans-serif;
+    border: none;
+}
+
+.rememberme{
+    font-family: 'Syne', sans-serif;
+    color: rgb(241, 90, 36);
+}
+
+.loginbutton{
+    color: rgb(241, 90, 36);
+    font-family: 'Syne', sans-serif;
+    border: none;
+    padding: 15px 80px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.loginbutton:hover{
+    background-color: rgb(241, 90, 36);
+    color: black;
+}
+
+.wantaccount .normal-text {
+    color: white; 
+}
+
+.checkboxbutton {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkboxbutton + .rememberme::before {
+    content: "";
+    display: inline-block;
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    border: 1px solid rgb(241, 90, 36); /* Border color */
+    border-radius: 4px; /* Optional: rounded corners */
+    margin-right: 10px; /* Space between checkbox and label */
+    box-sizing: border-box;
+    vertical-align: middle;
+    background-color: transparent; /* Ensure background is transparent initially */
+}
+
+  /* Custom checkbox checked state */
+  .checkboxbutton:checked + .rememberme::before {
+    background-color: rgb(241, 90, 36); /* Background color when checked */
+    border: 2px solid rgb(241, 90, 36); /* Border color when checked */
+  }
+
+  /* Preserve the default check mark */
+  .checkboxbutton:checked + .rememberme::before {
+    content: "✔"; /* Check mark */
+    color: white; /* Check mark color */
+    font-size: 14px; /* Adjust size as needed */
+    line-height: 20px; /* Adjust to center the check mark */
+    text-align: center; /* Center the check mark */
+  }
+
+/*--------------------------------------- SIGN-IN MODAL ---------------------------------------*/ 
+.container-signup{
+    background-color: black;
+    max-width: 900px;
+    height: 470px;
+}
+
+.title-signup{
+    color: white;
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(3rem, 2vw, 6rem);
+}
+
+.rotatedsecond{
+    transform: rotate(-90deg);
+    max-width: 300px; /* Adjust width as needed */
+    height: 200px;
+}  
+
+.register{
+    font-family: 'Syne', sans-serif;
+    color: rgb(241, 90, 36);
+}
+
+.agree{
+    font-family: 'Syne', sans-serif;
+    color: rgb(241, 90, 36);
+}
+
+.agreeterms {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.agreeterms + .agree::before {
+    content: "";
+    display: inline-block;
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    border: 1px solid rgb(241, 90, 36); /* Border color */
+    border-radius: 4px; /* Optional: rounded corners */
+    margin-right: 10px; /* Space between checkbox and label */
+    box-sizing: border-box;
+    vertical-align: middle;
+    background-color: transparent; /* Ensure background is transparent initially */
+}
+
+/* Custom checkbox checked state */
+.agreeterms:checked + .agree::before {
+background-color: rgb(241, 90, 36); /* Background color when checked */
+border: 2px solid rgb(241, 90, 36); /* Border color when checked */
+}
+
+/* Preserve the default check mark */
+.agreeterms:checked + .agree::before {
+content: "✔"; /* Check mark */
+color: white; /* Check mark color */
+font-size: 14px; /* Adjust size as needed */
+line-height: 20px; /* Adjust to center the check mark */
+text-align: center; /* Center the check mark */
+}
+
+.registerbutton{
+color: rgb(241, 90, 36);
+font-family: 'Syne', sans-serif;
+border: none;
+padding: 15px 80px;
+transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.registerbutton:hover{
+    background-color: rgb(241, 90, 36);
+    color: black;
+}
+
+.haveaccount .normal-text {
+    color: white; 
+}
+
+.forgotpassword{
+    color: rgb(241, 90, 36);
+    transition: color 0.2s ease; 
+}
+
+.forgotpassword:hover{
+    color: #f1efeb;
+}
+
+.title-reg{
+    color: white;
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(3rem, 2vw, 6rem);
+}
+
+#reg{
+    background-color: black;
+    max-width: 900px;
+    height: 630px;
+}
+
+.goto{
+    color: rgb(241, 90, 36);
+    transition: color 0.2s ease; 
+}
+
+.goto:hover{
+    color: #f1efeb;
+}
+
+body{
+    background-color: rgb(26,26,26);
+}

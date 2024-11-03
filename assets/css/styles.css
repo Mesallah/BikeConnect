@@ -1,0 +1,387 @@
+/*--------------------------------------- NAVBAR ---------------------------------------*/
+.custom-navbar {
+    background-color: rgb(26,26,26);
+  }
+  
+.custom-navbar .navbar-nav .nav-link, .custom-navbar .navbar-brand {
+    color: rgb(241, 90, 36); 
+    font-family: 'Syne', sans-serif;
+}
+  
+.custom-navbar .navbar-nav .nav-link:hover,
+.custom-navbar .navbar-brand:hover {
+    color: #f1efeb; 
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgb(255, 165, 0)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+.dropdown-item{
+    color: rgb(241, 90, 36);
+    background-color: rgb(26,26,26);
+}
+
+.dropdown-menu{
+    background-color:  rgb(26,26,26);
+}
+
+
+/*--------------------------------------- CRAFT NOW ---------------------------------------*/  
+.bike{
+    background-color: rgb(26,26,26);
+    max-height: 675px;
+    display: flex; /* Enable Flexbox layout kailangan muna bago gamitin yung sa baba*/
+    flex-direction: column; /* Arrange child elements in a column */
+    align-items: center; /* Center child elements horizontally (optional) */
+    padding: 5px; /* Optional: Add some padding to the container */
+}
+
+.craft{
+    color: white;
+    font-family: 'Syne', sans-serif;
+    
+}
+
+.craftnow{
+    color: rgb(241, 90, 36);
+    transition: color 0.2s ease; 
+}
+
+.craftnow:hover{
+    color: #f1efeb;
+}
+
+.image1{
+    max-width: 900px;
+    max-height: 500px;
+    width: 100%;
+    height: auto;
+} 
+
+.texts{
+    display: flex;
+    justify-content:flex-end;
+    flex-direction: column;
+}
+
+/*--------------------------------------- STEPS ---------------------------------------*/
+.steps{
+    background-color: rgb(0, 0, 0);
+    max-height: 780px;
+    display: flex; /* Enable Flexbox layout */
+    flex-direction: column; /* Arrange child elements in a column */
+    align-items: center; /* Center child elements horizontally (optional) */   
+    padding: 20px; /* Optional: Add some padding to the container */
+}
+
+.container{
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.row{
+    margin-top: -70px;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 10px;
+    margin: 10px;
+}
+
+.headers{
+    font-size: 3vw;
+    color: white;
+    margin-bottom: 15px;
+    font-family: 'Syne', sans-serif;
+}
+
+.ps{
+    font-size: 2vw;
+    font-family: 'Syne', sans-serif;
+}
+
+/*--------------------------------------- NEW RELEASES ---------------------------------------*/
+
+.newr{
+    background-color: rgb(16,16,16);
+}
+   
+.newreleases{
+    color: white;
+    font-family: 'Syne', sans-serif;
+
+}
+
+.bikename1{
+    font-family: 'Syne', sans-serif;
+    color: rgb(241, 90, 36);
+}
+
+.options{
+    background-color: black;
+    color: white;
+    padding: 2vw;
+}
+
+
+.optionnames{
+    font-size: clamp(1rem, 1.5vw, 3rem);
+}
+
+.images{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*--------------------------------------- TOP BRANDS ---------------------------------------*/
+
+.topbrands{
+    font-family: 'Syne', sans-serif;
+    color: white;
+}
+
+.brands{
+    background-color: rgb(26,26,26);
+}
+
+/*--------------------------------------- SAVEDBUILDS ---------------------------------------*/
+.savedbuildsimage{
+    width: 80%;
+    height: auto;
+}
+
+.totalprice, .totalweight{
+    font-family: 'Syne', sans-serif;
+    color: white;
+}
+
+.savedbuilds{
+    font-family: 'Syne', sans-serif;
+    color: white;
+}
+
+.viewspecification{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 7px 38px;
+    font-size: 1.3rem;
+    font-family: 'Syne', sans-serif;
+    transition: background-color .5s, color .5s;
+}
+
+.viewspecification:hover{
+    background-color: rgb(241, 90, 36);
+    color: black;
+}
+
+.table th{
+    font-family: 'Syne', sans-serif;
+    color: rgb(241, 90, 36);
+}
+
+.table td{
+    font-family: 'Syne', sans-serif;
+    color: white;
+}
+
+.table-striped tbody tr:nth-of-type(odd) td {
+    color: white; 
+}
+
+/*--------------------------------------- PRE-BUILT TEMPLATES ---------------------------------------*/
+.prebrands, .precategory{
+    color: rgb(241, 90, 36);
+    font-family: 'Syne', sans-serif;
+}
+
+.predropdown-item{
+    color: rgb(241, 90, 36);
+    background-color: rgb(26,26,26);
+}
+
+.predropdown-menu{
+    background-color:  rgb(26,26,26);
+}
+
+.brandbtn {
+    background-color: rgb(26,26,26);
+    color: white;
+    border-radius: 0;
+}
+
+.brandbtn:hover, .brandbtn:focus {
+    background-color: #333; 
+    color: white;
+    outline: none;
+    box-shadow: none;
+}
+
+.preoptions{
+    color: white;
+    font-family: 'Syne', sans-serif;
+}
+
+/*--------------------------------------- PRE-BUILT TEMPLATES ---------------------------------------*/
+
+.partshead{
+    color: white;
+    font-family: 'Syne', sans-serif;
+}
+
+/*--------------------------------------- PARTS LIST TEMPLATES ---------------------------------------*/
+
+.partssearch, .partsprice, .partsweight{
+    color: rgb(241, 90, 36);
+    font-family: 'Syne', sans-serif;
+}
+
+#search{
+    width: 70%;
+    border-radius: 0%;
+    background-color: rgb(26,26,26);
+    border: none;
+    color: white;
+    padding-left: 10px;
+    margin-left: 10px;
+    font-family: 'Syne', sans-serif;
+}
+
+.partslist{
+    background-color:rgb(16,16,16);
+    /*position: fixed;*/
+}
+
+.sidenav1 {
+    width: 200px;
+    /*position: fixed;*/
+    /*top: 200px;*/
+    /*left: 10px;*/
+    font-family: 'Syne', sans-serif;
+}
+  
+.sidenav-section {
+    margin-bottom: 20px; /* Adds space between sections */
+}
+
+.sidenav-header {
+    font-size: 18px;
+    color: rgb(241, 90, 36);
+    margin-bottom: 5px;
+}
+
+.sidenav-content {
+    background: rgb(26,26,26);
+    padding: 8px 0;
+}
+
+.sidenav-content a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+}
+
+.sidenav-content a:hover {
+    color: rgb(241, 90, 36);
+}
+
+/*--------------------------------------- BUILD ---------------------------------------*/
+.buildheadops{
+    color: white;
+    font-family: 'Syne', sans-serif;
+    text-decoration: none;
+}
+
+.buildheadops:hover {
+    color: rgb(241, 90, 36);
+}
+
+.buildpart, .buildspecs, .buildprice, .filterbrand, .buildtotal{
+    color: white;
+    font-family: 'Syne', sans-serif;
+}
+
+.detailtext, .buildtotals{
+    color: rgb(241, 90, 36);
+    font-family: 'Syne', sans-serif;
+}
+
+.scrollable-options{
+    width: 300px;  /* Set the desired width of the container */
+    height: 300px;
+    overflow: auto;
+}
+
+.buildbg{
+    background-color: rgb(26,26,26);
+}
+
+.buildfilterbrand {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 0;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.buildfilterbrand:hover{
+    background-color: rgb(241, 90, 36);
+    color: black;
+}
+
+#container3D {
+    width: 100%;      
+    height: 500px;     
+    background-color:  rgb(26,26,26); 
+    position: relative;
+  }
+
+
+/*--------------------------------------- SAVED BUILDS SPECS ---------------------------------------*/
+
+.savedbuildsspecs{
+    background-color: rgb(16,16,16);
+}
+
+.savedpart, .savedname, .savedprice{
+    color: white;
+    font-family: 'Syne', sans-serif;
+}
+
+.addtofav, .goback{
+    width: 300px;
+}
+
+.savedviewspecification{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 7px 38px;
+    font-size: 1.3rem;
+    font-family: 'Syne', sans-serif;
+    transition: background-color .5s, color .5s;
+}
+
+.savedviewspecification:hover{
+    background-color: rgb(241, 90, 36);
+    color: black;
+}
+
+/*--------------------------------------- PRE-BUILT SPECS ---------------------------------------*/
+
+.prebuiltspecs{
+    background-color: rgb(16,16,16);
+}
+

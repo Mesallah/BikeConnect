@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/styles.css'); ?>">
+
 </head>
 <body>  
 
@@ -22,7 +23,7 @@
 
 <!-- -------------------------------- CRAFT NOW -------------------------------- -->
   <section class="bike container-fluid">
-    <img class="image1" src="pngs/asdasda.png" alt="image shown">
+    <img class="image1" src="<?= base_url('assets/pngs/asdasda.png') ?>" alt="image shown">
     <div class="texts text-center mb-3">
       <h1 class="craft" style="font-size: 5vw">Craft your Bike</h1>
       <a href="buildspecs.php"> <u class="craftnow">Craft now</u></a>
@@ -56,7 +57,7 @@
           <h1 class="newreleases display-3">New Releases</h1>
       </div>
     <div class="d-flex justify-content-center">
-      <img class="image1" src="pngs/asdasda.png" alt="image shown">
+      <img class="image1" src="<?= base_url('assets/pngs/asdasda.png') ?>" alt="image shown">
     </div>
     <div class="text-center">
         <h1 class="bikename1 fs-2" href="#">Giant  Infinity Trail Offroad V2</h1>
@@ -68,37 +69,37 @@
       <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-3">
         <div class="options p-3">
           <h2 class="optionnames align-self-start">Standert Carbon Vortex</h2>
-          <img class="images img-fluid w-75" src="pngs/standert.png" alt="image shown">
+          <img class="images img-fluid w-75" src="<?= base_url('assets/pngs/standert.png') ?>" alt="image shown">
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-3">
         <div class="options p-3">
           <h2 class="optionnames align-self-start">Tuff Cyclone Pro</h2>
-          <img class="images img-fluid w-75" src="pngs/standert.png" alt="image shown">
+          <img class="images img-fluid w-75" src="<?= base_url('assets/pngs/standert.png') ?>" alt="image shown">
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-3">
         <div class="options p-3">
           <h2 class="optionnames align-self-start">Boulevard Stellar Comfort</h2>
-          <img class="images img-fluid w-75" src="pngs/standert.png" alt="image shown">
+          <img class="images img-fluid w-75" src="<?= base_url('assets/pngs/standert.png') ?>" alt="image shown">
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-3">
         <div class="options p-3">
           <h2 class="optionnames align-self-start">Carbon Titan Grip Brake Lever </h2>
-          <img class="images img-fluid w-75" src="pngs/standert.png" alt="image shown">
+          <img class="images img-fluid w-75" src="<?= base_url('assets/pngs/standert.png') ?>" alt="image shown">
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-3">
         <div class="options p-3">
           <h2 class="optionnames align-self-start">Pembree AeroGrip 32A</h2>
-          <img class="images img-fluid w-75" src="pngs/standert.png" alt="image shown">
+          <img class="images img-fluid w-75" src="<?= base_url('assets/pngs/standert.png') ?>" alt="image shown">
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-3">
         <div class="options p-3">
           <h2 class="optionnames align-self-start">Infinity Quantum Quill Stem</h2>
-          <img class="images img-fluid w-75" src="pngs/standert.png" alt="image shown">
+          <img class="images img-fluid w-75" src="<?= base_url('assets/pngs/standert.png') ?>" alt="image shown">
         </div>
       </div>
       <div class="text-center mt-4">
@@ -119,7 +120,7 @@
           <h1 class="topbrands display-3">Top Brands</h1>
       </div>
       <div class="d-flex justify-content-start">
-        <img class="image1" src="pngs/asdasda.png" alt="image shown">
+        <img class="image1" src="<?= base_url('assets/pngs/asdasda.png') ?>" alt="image shown">
       </div>
   </div>
 </section>
