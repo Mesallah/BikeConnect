@@ -155,9 +155,14 @@
     background-color: rgb(26,26,26);
 }
 
-.arrow{
+.arrow {
     width: 20vw;
     height: 20vh;
+    transition: fill 0.5s; 
+}
+
+.arrow:hover {
+    fill: rgb(231, 94, 94); 
 }
 
 /*--------------------------------------- SAVEDBUILDS ---------------------------------------*/

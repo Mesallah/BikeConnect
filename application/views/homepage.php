@@ -115,16 +115,24 @@
 
 
 <section class="brands container-fluid">
-  <div class="row p-0 m-0">
-      <div class="col-12 mt-4 ms-2">
-          <h1 class="topbrands display-3">Top Brands</h1>
-      </div>
-      <div class="d-flex justify-content-start">
-        <img class="image1" src="<?= base_url('assets/pngs/asdasda.png') ?>" alt="image shown">
-        <img  class="arrow" src="<?= base_url('assets/svg/arrow.svg') ?>" alt="svg file here">
-      </div>
-  </div>
+    <div class="row p-0 m-0">
+        <div class="col-12 mt-4 ms-2">
+            <h1 class="topbrands display-3">Top Brands</h1>
+        </div>
+        <div class="col-12 d-flex justify-content-between align-items-center mt-3">
+            <div class="image-container">
+                <img class="image1" src="<?= base_url('assets/pngs/asdasda.png') ?>" alt="image shown">
+            </div>
+            <div class="arrow-container">
+                <a href="<?= site_url('HomeController/topbrands') ?>">
+                    <img class="arrow" src="<?= base_url('assets/svg/arrow.svg') ?>" alt="svg file here">
+                </a>
+            </div>
+        </div>
+    </div>
 </section>
+
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>    

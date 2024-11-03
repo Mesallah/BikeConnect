@@ -11,10 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/styles.css'); ?>">
 </head>
 <body>
 
+<?php $this->load->view('navbar'); ?>
 <!-- -------------------------------- TOP BRANDS -------------------------------- -->
 
   <section class="newr container-fluid">
@@ -25,11 +26,11 @@
     </div>
     <div class="row p-0 m-0">
       <div class="col-2 mt-4">
-        <img src="pngs/trinx.png" alt="image here">
+        <img src="<?= base_url('assets/pngs/trinx.png') ?>" alt="image here">
         <button class="viewspecification" data-bs-toggle="modal" data-bs-target="#specifications"> View Specification</button>
       </div>
       <div class="col-8 d-flex justify-content-center">
-        <img class="savedbuildsimage img-fluid" src="pngs/asdasda.png" alt="image shown">
+        <img class="savedbuildsimage img-fluid" src="<?= base_url('assets/pngs/asdasda.png') ?>" alt="image shown">
       </div>
       <div class="col-2 d-flex flex-column justify-content-end align-items-end pe-4">
         <p class="totalprice fs-4">Total Price: 1000php</p>
@@ -121,28 +122,54 @@
 
 <!-- -------------------------------- CUSTOM BUILDS -------------------------------- -->
 
-<section class="newr container-fluid p-4">
-  <div class="row gx-4 mt-1 px-5">
-    <div class="col-sm-6 col-md-6 col-lg-4 mt-3">
-      <div class="options p-3">
-        <h2 class="optionnames align-self-start">Standert Carbon Vortex</h2>
-        <img class="images img-fluid w-75" src="pngs/standert.png" alt="image shown">
-      </div>
+<div class="newr container-fluid">
+    <div class="row ">
+        <?php
+        if (!empty($result)) { // Check if $result is not empty
+            foreach ($result as $row) {
+                echo '<div class="col-lg-4 col-md-6 mb-4">';  
+                echo '  <div class="card h-100">';
+                echo '      <img class="card-img-top" src="assets/pngs/asdasda.png" alt="Part image">'; 
+                echo '      <div class="card-body">';
+                echo '          <h5 class="card-title">'. htmlspecialchars($row['model']) .'</h5>';
+                echo '          <p class="card-text">Price: '. htmlspecialchars($row['price']) .' PHP</p>';
+                echo '          <p class="card-text">Weight: '. htmlspecialchars($row['weight']) .'</p>';
+                echo '          <button class="btn btn-primary view-details" data-bs-toggle="modal" data-bs-target="#modal'. htmlspecialchars($row['part_id']) .'">View Details</button>';
+                echo '      </div>';
+                echo '  </div>';
+                echo '</div>';
+
+                
+                echo '<div class="modal fade" id="modal'. htmlspecialchars($row['part_id']) .'" tabindex="-1" aria-labelledby="modalLabel'. htmlspecialchars($row['part_id']) .'" aria-hidden="true">';
+                echo '  <div class="modal-dialog modal-lg">';
+                echo '      <div class="modal-content">';
+                echo '          <div class="modal-header">';
+                echo '              <h5 class="modal-title" id="modalLabel'. htmlspecialchars($row['part_id']) .'">'. htmlspecialchars($row['model']) .'</h5>';
+                echo '              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>';
+                echo '          </div>';
+                echo '          <div class="modal-body">';
+                echo '              <p><strong>Color:</strong> '. htmlspecialchars($row['color']) .'</p>';
+                echo '              <p><strong>Material:</strong> '. htmlspecialchars($row['material']) .'</p>';
+                echo '              <p><strong>Size:</strong> '. htmlspecialchars($row['size']) .'</p>';
+                echo '              <p><strong>Weight:</strong> '. htmlspecialchars($row['weight']) .'</p>';
+                echo '              <p><strong>Diameter:</strong> '. htmlspecialchars($row['diameter']) .'</p>';
+                echo '              <p><strong>Price:</strong> '. htmlspecialchars($row['price']) .' PHP</p>';
+                echo '          </div>';
+                echo '          <div class="modal-footer">';
+                echo '              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>';
+                echo '          </div>';
+                echo '      </div>';
+                echo '  </div>';
+                echo '</div>';
+            }
+        } else {
+            echo '<p>No parts found</p>';
+        }
+        ?>
     </div>
-    <div class="col-sm-6 col-md-6 col-lg-4 mt-3">
-      <div class="options p-3">
-        <h2 class="optionnames align-self-start">Tuff Cyclone Pro</h2>
-        <img class="images img-fluid w-75" src="pngs/standert.png" alt="image shown">
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-6 col-lg-4 mt-3">
-      <div class="options p-3">
-        <h2 class="optionnames align-self-start">Boulevard Stellar Comfort</h2>
-        <img class="images img-fluid w-75" src="pngs/standert.png" alt="image shown">
-      </div>
-    </div>
-  </div>
-</section>
+</div>
+
+
 
 
 
