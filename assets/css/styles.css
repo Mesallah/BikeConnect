@@ -155,6 +155,11 @@
     background-color: rgb(26,26,26);
 }
 
+.arrow{
+    width: 200px;
+    height: 200px;
+}
+
 /*--------------------------------------- SAVEDBUILDS ---------------------------------------*/
 .savedbuildsimage{
     width: 80%;

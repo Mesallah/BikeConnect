@@ -121,6 +121,7 @@
       </div>
       <div class="d-flex justify-content-start">
         <img class="image1" src="<?= base_url('assets/pngs/asdasda.png') ?>" alt="image shown">
+        <img  class="arrow" src="<?= base_url('assets/svg/arrow.svg') ?>" alt="svg file here">
       </div>
   </div>
 </section>
