@@ -68,10 +68,10 @@
 /*--------------------------------------- STEPS ---------------------------------------*/
 .steps{
     background-color: rgb(0, 0, 0);
-    max-height: 780px;
+    max-height: 780px; 
     display: flex; /* Enable Flexbox layout */
     flex-direction: column; /* Arrange child elements in a column */
-    align-items: center; /* Center child elements horizontally (optional) */   
+    align-items: center; /* Center child elements horizontally (optional)*/   
     padding: 20px; /* Optional: Add some padding to the container */
 }
 
@@ -394,4 +394,29 @@
 .prebuiltspecs{
     background-color: rgb(16,16,16);
 }
+
+/*--------------------------------------- FILTER MODAL ---------------------------------------*/
+
+.craftnowtext{
+    color: rgb(241, 90, 36);
+    background-color:  rgb(26,26,26);
+    font-family: 'Syne', sans-serif;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.craftnowtext:hover {
+    color: rgb(255, 140, 90); 
+}
+
+.modal-header, .modal-body, .modal-footer {
+    background-color: black;
+    color: white;
+}
+
+.btn-close {
+    filter: invert(1); /* Invert close button color for better visibility on dark backgrounds */
+}
+
+
 

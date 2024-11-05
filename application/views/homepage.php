@@ -26,9 +26,40 @@
     <img class="image1" src="<?= base_url('assets/pngs/asdasda.png') ?>" alt="image shown">
     <div class="texts text-center mb-3">
       <h1 class="craft" style="font-size: 5vw">Craft your Bike</h1>
-      <a href="buildspecs.php"> <u class="craftnow">Craft now</u></a>
+      <button class="craftnowtext" data-bs-toggle="modal" data-bs-target="#specifications"> <u>Craft Now</u> </button>
     </div>
   </section>
+
+<!-- -------------------------------- FILTER MODAL -------------------------------- -->
+
+  <div class="modal fade modal1" id="specifications" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="specificationshead">Choose your Bike</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+                    <div class="row text-center">
+                        <div class="col-md-4 category-item">
+                            <img src="mountainwheel.png" alt="Mountain Bike" class="img-fluid">
+                            <p>Mountain Bike</p>
+                        </div>
+                        <div class="col-md-4 category-item">
+                            <img src="roadwheel.png" alt="Road Bike" class="img-fluid">
+                            <p>Road Bike</p>
+                        </div>
+                        <div class="col-md-4 category-item">
+                            <img src="gravelwheel.png" alt="Gravel Bike" class="img-fluid">
+                            <p>Gravel Bike</p>
+                        </div>
+                    </div>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
 
 <!-- -------------------------------- STEPS ibahin pa to -------------------------------- -->
 
@@ -132,7 +163,7 @@
     </div>
 </section>
 
-
+<script src="filtermodal.js"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>    

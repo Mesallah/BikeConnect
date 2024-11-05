@@ -14,7 +14,6 @@ class HomeController extends CI_Controller {
         $query = $this->db->get('part'); 
         $result = $query->result_array(); 
     
-        // Pass the data to the view
         $this->load->view('Parts/topbrands', ['result' => $result]);
     }
     

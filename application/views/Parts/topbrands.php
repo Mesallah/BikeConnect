@@ -27,14 +27,13 @@
     <div class="row p-0 m-0">
       <div class="col-2 mt-4">
         <img src="<?= base_url('assets/pngs/trinx.png') ?>" alt="image here">
-        <button class="viewspecification" data-bs-toggle="modal" data-bs-target="#specifications"> View Specification</button>
+        <button class="previous" data-bs-toggle="modal" data-bs-target="#specifications"> Previous</button>
       </div>
       <div class="col-8 d-flex justify-content-center">
         <img class="savedbuildsimage img-fluid" src="<?= base_url('assets/pngs/asdasda.png') ?>" alt="image shown">
       </div>
       <div class="col-2 d-flex flex-column justify-content-end align-items-end pe-4">
-        <p class="totalprice fs-4">Total Price: 1000php</p>
-        <p class="totalweight fs-4">Total Weight: 7kg</p>
+        <button class="next" data-bs-toggle="modal" data-bs-target="#specifications"> Next</button>
       </div>
     </div>
   </section>
