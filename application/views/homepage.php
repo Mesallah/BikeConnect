@@ -32,7 +32,7 @@
 
 <!-- -------------------------------- FILTER MODAL -------------------------------- -->
 
-  <div class="modal fade modal1" id="specifications" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade modal1" id="specifications" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
@@ -43,15 +43,15 @@
             <div class="container">
                     <div class="row text-center">
                         <div class="col-md-4 category-item">
-                            <img src="mountainwheel.png" alt="Mountain Bike" class="img-fluid">
+                        <img src="<?= base_url('assets/pngs/mountainwheel.png') ?>" alt="Mountain Bike" class="img-fluid">
                             <p>Mountain Bike</p>
                         </div>
                         <div class="col-md-4 category-item">
-                            <img src="roadwheel.png" alt="Road Bike" class="img-fluid">
+                            <img src="<?= base_url('assets/pngs/roadwheel.png') ?>" alt="Road Bike" class="img-fluid">
                             <p>Road Bike</p>
                         </div>
                         <div class="col-md-4 category-item">
-                            <img src="gravelwheel.png" alt="Gravel Bike" class="img-fluid">
+                            <img src="<?= base_url('assets/pngs/gravelwheel.png') ?>" alt="Gravel Bike" class="img-fluid">
                             <p>Gravel Bike</p>
                         </div>
                     </div>

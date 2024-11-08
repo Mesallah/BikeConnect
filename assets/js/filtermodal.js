@@ -1,5 +1,4 @@
-document.getElementById("openModal").onclick = function(event) {
-    event.preventDefault(); // Prevents the page from refreshing
+document.getElementById("openModal").onclick = function() {
     document.getElementById("modal").style.display = "flex";
 };
 
