@@ -155,7 +155,7 @@
                 <img class="image1" src="<?= base_url('assets/pngs/asdasda.png') ?>" alt="image shown">
             </div>
             <div class="arrow-container">
-                <a href="<?= site_url('HomeController/topbrands') ?>">
+                <a href="<?= site_url('Home/topbrands') ?>">
                     <img class="arrow" src="<?= base_url('assets/svg/arrow.svg') ?>" alt="svg file here">
                 </a>
             </div>
