@@ -9,12 +9,16 @@ class Home extends CI_Controller {
 
     public function topbrands() {
         $this->load->database();
-    
-    
-        $query = $this->db->get('part'); 
-        $result = $query->result_array(); 
-    
+        $this->load->model('TopBrands_model'); // model
+
+        
+        $result = $this->TopBrands_model->get_top_brand_parts();
+
         $this->load->view('Parts/topbrands', ['result' => $result]);
+    }
+
+    public function newreleases() {
+        $this->load->view('newreleases'); 
     }
     
 }
