@@ -24,7 +24,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto me-4 mb-2 mb-lg-0">
           <li class="nav-item me-4">
-            <a class="nav-link fs-6 active" aria-current="page" <a href="<?= site_url('Home') ?>"> Home</a> 
+            <a class="nav-link fs-6 active" aria-current="page" a href="<?= site_url('Home') ?>"> Home</a> 
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle me-4 fs-6" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

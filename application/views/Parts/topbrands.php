@@ -138,7 +138,6 @@
                 echo '  </div>';
                 echo '</div>';
 
-                
                 echo '<div class="modal fade" id="modal'. htmlspecialchars($row['part_id']) .'" tabindex="-1" aria-labelledby="modalLabel'. htmlspecialchars($row['part_id']) .'" aria-hidden="true">';
                 echo '  <div class="modal-dialog modal-lg">';
                 echo '      <div class="modal-content">';
