@@ -131,11 +131,17 @@
     background-color: black;
     color: white;
     padding: 2vw;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    text-decoration: none;
 }
 
+.options:hover {
+    background-color: #202020; /* Lighten background on hover */
+}
 
 .optionnames{
     font-size: clamp(1rem, 1.5vw, 3rem);
+    text-decoration: none;
 }
 
 .images{

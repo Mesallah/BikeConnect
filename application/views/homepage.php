@@ -148,18 +148,16 @@
         <?php
         if (!empty($new_releases)) {
             foreach ($new_releases as $row) {
-                echo '<div class="col-lg-4 col-md-6 mb-4">';  
-                echo '  <div class="card h-100">';
-                echo '      <img class="card-img-top" src="assets/pngs/asdasda.png" alt="Part image">'; 
-                echo '      <div class="card-body">';
-                echo '          <h5 class="card-title">'. htmlspecialchars($row['model']) .'</h5>';
-                echo '          <p class="card-text">Price: '. htmlspecialchars($row['price']) .' PHP</p>';
-                echo '          <p class="card-text">Weight: '. htmlspecialchars($row['weight']) .'</p>';
-                echo '          <button class="btn btn-primary view-details" data-bs-toggle="modal" data-bs-target="#modal'. htmlspecialchars($row['part_id']) .'">View Details</button>';
-                echo '      </div>';
-                echo '  </div>';
-                echo '</div>';
+              echo '<a href="#" class="col-12 col-sm-6 col-md-6 col-lg-4 mt-3" data-bs-toggle="modal" data-bs-target="#modal'. htmlspecialchars($row['part_id']) .'">';  
+              echo '  <div class="options p-3" style="cursor: pointer;">';  
+              echo '      <h2 class="optionnames align-self-start">'. htmlspecialchars($row['model']) .'</h2>';  
+              echo '      <img class="images img-fluid w-75" src="assets/pngs/asdasda.png" alt="Part image">';  
+              echo '      <p class="card-text">Price: '. htmlspecialchars($row['price']) .' PHP</p>';  
+              echo '      <p class="card-text">Weight: '. htmlspecialchars($row['weight']) .'</p>';  
+              echo '  </div>';  
+              echo '</a>';
 
+              
                 // Modal
                 echo '<div class="modal fade" id="modal'. htmlspecialchars($row['part_id']) .'" tabindex="-1" aria-labelledby="modalLabel'. htmlspecialchars($row['part_id']) .'" aria-hidden="true">';
                 echo '  <div class="modal-dialog modal-lg">';
