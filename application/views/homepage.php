@@ -148,38 +148,15 @@
         <?php
         if (!empty($new_releases)) {
             foreach ($new_releases as $row) {
-              echo '<a href="#" class="col-12 col-sm-6 col-md-6 col-lg-4 mt-3" data-bs-toggle="modal" data-bs-target="#modal'. htmlspecialchars($row['part_id']) .'">';  
-              echo '  <div class="options p-3" style="cursor: pointer;">';  
-              echo '      <h2 class="optionnames align-self-start">'. htmlspecialchars($row['model']) .'</h2>';  
-              echo '      <img class="images img-fluid w-75" src="assets/pngs/asdasda.png" alt="Part image">';  
-              echo '      <p class="card-text">Price: '. htmlspecialchars($row['price']) .' PHP</p>';  
-              echo '      <p class="card-text">Weight: '. htmlspecialchars($row['weight']) .'</p>';  
-              echo '  </div>';  
-              echo '</a>';
-
-              
-                // Modal
-                echo '<div class="modal fade" id="modal'. htmlspecialchars($row['part_id']) .'" tabindex="-1" aria-labelledby="modalLabel'. htmlspecialchars($row['part_id']) .'" aria-hidden="true">';
-                echo '  <div class="modal-dialog modal-lg">';
-                echo '      <div class="modal-content">';
-                echo '          <div class="modal-header">';
-                echo '              <h5 class="modal-title" id="modalLabel'. htmlspecialchars($row['part_id']) .'">'. htmlspecialchars($row['model']) .'</h5>';
-                echo '              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>';
-                echo '          </div>';
-                echo '          <div class="modal-body">';
-                echo '              <p><strong>Color:</strong> '. htmlspecialchars($row['color']) .'</p>';
-                echo '              <p><strong>Material:</strong> '. htmlspecialchars($row['material']) .'</p>';
-                echo '              <p><strong>Size:</strong> '. htmlspecialchars($row['size']) .'</p>';
-                echo '              <p><strong>Weight:</strong> '. htmlspecialchars($row['weight']) .'</p>';
-                echo '              <p><strong>Diameter:</strong> '. htmlspecialchars($row['diameter']) .'</p>';
-                echo '              <p><strong>Price:</strong> '. htmlspecialchars($row['price']) .' PHP</p>';
-                echo '          </div>';
-                echo '          <div class="modal-footer">';
-                echo '              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>';
-                echo '          </div>';
-                echo '      </div>';
+                // Redirect link to newreleasesspecs.php with part_id as a parameter
+                echo '<a href="' . site_url('home/newreleasesspecs/' . $row['part_id']) . '" class="col-12 col-sm-6 col-md-6 col-lg-4 mt-3">';
+                echo '  <div class="options p-3" style="cursor: pointer;">';
+                echo '      <h2 class="optionnames align-self-start">' . htmlspecialchars($row['model']) . '</h2>';
+                echo '      <img class="images img-fluid w-75" src="assets/pngs/asdasda.png" alt="Part image">';
+                echo '      <p class="card-text">Price: ' . htmlspecialchars($row['price']) . ' PHP</p>';
+                echo '      <p class="card-text">Weight: ' . htmlspecialchars($row['weight']) . '</p>';
                 echo '  </div>';
-                echo '</div>';
+                echo '</a>';
             }
         } else {
             echo '<p>No new releases found</p>';
@@ -187,6 +164,7 @@
         ?>
     </div>
 </div>
+
 
 
 <!-- -------------------------------- BRANDS -------------------------------- -->

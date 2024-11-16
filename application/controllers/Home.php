@@ -8,7 +8,6 @@ class Home extends CI_Controller {
         $new_releases = $this->NewReleases_model->get_new_releases();
 
         $this->load->view('homepage', ['new_releases' => $new_releases]);
-        
     }
 
     public function topbrands() {
@@ -28,5 +27,19 @@ class Home extends CI_Controller {
 
         // Load a view for new releases if required
         $this->load->view('Parts/new_releases', ['new_releases' => $new_releases]);
+    }
+
+    public function newreleasesspecs($part_id) {
+        $this->load->model('NewReleases_model');
+        // Fetch the specific part details based on part_id
+        $part_details = $this->NewReleases_model->get_part_details($part_id);
+
+        if ($part_details) {
+            // Pass the part details to the newreleasesspecs view
+            $this->load->view('Parts/newreleasesspecs', ['part' => $part_details]);
+        } else {
+            // If no part found, redirect to a 404 page
+            show_404();
+        }
     }
 }

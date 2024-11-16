@@ -15,51 +15,58 @@
 </head>
 <body>
     
-<?php
-  include("navbar.php");
-?>
+<?php $this->load->view('navbar'); ?>
 
 <!-- -------------------------------- MAIN CONTENT -------------------------------- -->
 
-  <section class="savedbuildsspecs container-fluid">
+<section class="savedbuildsspecs container-fluid">
     <div class="row ms-2 p-0 pt-5 m-0">
-      <div class="col-lg-3">
-          <div class="bike-details">
-            <div>
-              <h2 class="savedpart display-4">New Releases</h2>
-              <h3 class="savedname fs-2">Standert Carbon Vortex </h3>
-              <h3 class="savedprice mt-5">Price: Php 1000</h3>
+        <div class="col-lg-3">
+            <div class="bike-details">
+                <div>
+                    <h2 class="savedpart display-4">New Releases</h2>
+                    <!-- Dynamically display part model name -->
+                    <h3 class="savedname fs-2"><?php echo htmlspecialchars($part['model']); ?></h3>
+                    <!-- Dynamically display part price -->
+                    <h3 class="savedprice mt-5">Price: Php <?php echo htmlspecialchars($part['price']); ?></h3>
+                </div>
+                <div class="buildspecs mt-5 fs-4">
+                    <!-- Dynamically display part details -->
+                    <p>Color: <span class="detailtext"><?php echo htmlspecialchars($part['color']); ?></span></p>
+                    <p>Material: <span class="detailtext"><?php echo htmlspecialchars($part['material']); ?></span></p>
+                    <p>Size: <span class="detailtext"><?php echo htmlspecialchars($part['size']); ?></span></p>
+                    <p>Weight: <span class="detailtext"><?php echo htmlspecialchars($part['weight']); ?></span></p>
+                    <p>Diameter: <span class="detailtext"><?php echo htmlspecialchars($part['diameter']); ?></span></p>
+                </div>
             </div>
-            <div class="buildspecs mt-5 fs-4">
-              <p>Wheel Size: <span class="detailtext">29"</span></p>
-              <p>Suspension: <span class="detailtext">120mm</span></p>
-              <p>intended Use: <span class="detailtext">XC</span></p> <!-- di ko alam kung lahat ba may weight-->
+            <div class="addtofav">
+                <button class="savedviewspecification" data-bs-toggle="modal" data-bs-target="#specifications">Add to Favorites</button>
             </div>
-          </div>
-          <div class="addtofav">
-            <button class="savedviewspecification" data-bs-toggle="modal" data-bs-target="#specifications">Add to Favorites</button>
-          </div>
-          <div class="goback mt-3 mb-4">
-            <button class="savedviewspecification" data-bs-toggle="modal" data-bs-target="#specifications">Go back</button>
-          </div>
-      </div>
-
-      <div class="col-lg-6 d-flex justify-content-center align-items-center">
-          <img src="pngs/asdasda.png" class="img-fluid" alt="Bike Image">
-      </div>
-
-      <div class="col-lg-3">
-        <div>
-          <h3 class="filterbrand"> Recommended:</h3>
+            <div class="goback mt-3 mb-4">
+                <!-- You can change the button to redirect to another page or remove the modal functionality -->
+                <button class="savedviewspecification" onclick="window.history.back();">Go back</button>
+            </div>
         </div>
-          <div class="scrollable-options mt-3">
-              <img src="pngs/standert.png" class="img-fluid mb-2" alt="Option 1">
-              <img src="pngs/standert.png" class="img-fluid mb-2" alt="Option 2">
-              <img src="pngs/standert.png" class="img-fluid mb-2" alt="Option 3">
-          </div>
-      </div>      
+
+        <div class="col-lg-6 d-flex justify-content-center align-items-center">
+            <!-- Dynamically display the image -->
+            <img src="pngs/<?php echo htmlspecialchars($part['image']); ?>" class="img-fluid" alt="Bike Image">
+        </div>
+
+        <div class="col-lg-3">
+            <div>
+                <h3 class="filterbrand">Recommended:</h3>
+            </div>
+            <div class="scrollable-options mt-3">
+                <!-- Recommended parts (replace with actual recommended parts data) -->
+                <img src="pngs/standert.png" class="img-fluid mb-2" alt="Option 1">
+                <img src="pngs/standert.png" class="img-fluid mb-2" alt="Option 2">
+                <img src="pngs/standert.png" class="img-fluid mb-2" alt="Option 3">
+            </div>
+        </div>      
     </div>
 </section>
+
 
     
     
