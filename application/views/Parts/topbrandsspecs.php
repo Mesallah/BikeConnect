@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Releases</title>
+    <title>Top Brands</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/newreleasesspecsstyles.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/topbrandsspecsstyles.css'); ?>">
 </head>
 <body>
     
@@ -24,7 +24,7 @@
         <div class="col-lg-4">
             <div class="bike-details">
                 <div>
-                    <h2 class="savedpart display-4">New Releases</h2>
+                    <h2 class="savedpart display-4">Top Brands</h2>
                     <!-- Dynamically display part model name -->
                     <h3 class="savedname fs-2"><?php echo htmlspecialchars($part['model']); ?></h3>
                     <!-- Dynamically display part price -->
@@ -55,28 +55,7 @@
     </div>
 </section>
 
-<div class="newr container-fluid">
-    <!-- Display similar parts -->
-    <div class="similar-parts">
-        <h2 class="savedpart display-4">Similar Parts</h2>
-        <div class="row mt-3">
-            <?php if (!empty($similar_parts)): ?>
-                <?php foreach ($similar_parts as $row): ?>
-                    <a href="<?php echo site_url('home/newreleasesspecs/' . $row['part_id']); ?>" class="col-12 col-sm-6 col-md-6 col-lg-4 mt-3">
-                        <div class="options p-3" style="cursor: pointer;">
-                            <h2 class="optionnames align-self-start"><?php echo htmlspecialchars($row['model']); ?></h2>
-                            <img class="images img-fluid w-75" src="assets/pngs/asdasda.png" alt="Part image">
-                            <p class="card-text">Price: <?php echo htmlspecialchars($row['price']); ?> PHP</p>
-                            <p class="card-text">Weight: <?php echo htmlspecialchars($row['weight']); ?></p>
-                        </div>
-                    </a>
-                <?php endforeach; ?>
-            <?php else: ?>
-                <p>No similar parts found</p>
-            <?php endif; ?>
-        </div>
-    </div>
-</div>
+
 
 
 

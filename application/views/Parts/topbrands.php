@@ -122,42 +122,19 @@
 <!-- -------------------------------- CUSTOM BUILDS -------------------------------- -->
 
 <div class="newr container-fluid">
-    <div class="row ">
+    <div class="row">
         <?php
         if (!empty($result)) { // Check if $result is not empty
             foreach ($result as $row) {
                 echo '<div class="col-lg-4 col-md-6 mb-4">';  
-                echo '  <div class="card h-100">';
+                echo '  <a href="' . site_url('home/topbrandsspecs/' . $row['part_id']) . '" class="card h-100 text-decoration-none text-dark">'; // Make card clickable
                 echo '      <img class="card-img-top" src="assets/pngs/asdasda.png" alt="Part image">'; 
                 echo '      <div class="card-body">';
                 echo '          <h5 class="card-title">'. htmlspecialchars($row['model']) .'</h5>';
                 echo '          <p class="card-text">Price: '. htmlspecialchars($row['price']) .' PHP</p>';
                 echo '          <p class="card-text">Weight: '. htmlspecialchars($row['weight']) .'</p>';
-                echo '          <button class="btn btn-primary view-details" data-bs-toggle="modal" data-bs-target="#modal'. htmlspecialchars($row['part_id']) .'">View Details</button>';
                 echo '      </div>';
-                echo '  </div>';
-                echo '</div>';
-
-                echo '<div class="modal fade" id="modal'. htmlspecialchars($row['part_id']) .'" tabindex="-1" aria-labelledby="modalLabel'. htmlspecialchars($row['part_id']) .'" aria-hidden="true">';
-                echo '  <div class="modal-dialog modal-lg">';
-                echo '      <div class="modal-content">';
-                echo '          <div class="modal-header">';
-                echo '              <h5 class="modal-title" id="modalLabel'. htmlspecialchars($row['part_id']) .'">'. htmlspecialchars($row['model']) .'</h5>';
-                echo '              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>';
-                echo '          </div>';
-                echo '          <div class="modal-body">';
-                echo '              <p><strong>Color:</strong> '. htmlspecialchars($row['color']) .'</p>';
-                echo '              <p><strong>Material:</strong> '. htmlspecialchars($row['material']) .'</p>';
-                echo '              <p><strong>Size:</strong> '. htmlspecialchars($row['size']) .'</p>';
-                echo '              <p><strong>Weight:</strong> '. htmlspecialchars($row['weight']) .'</p>';
-                echo '              <p><strong>Diameter:</strong> '. htmlspecialchars($row['diameter']) .'</p>';
-                echo '              <p><strong>Price:</strong> '. htmlspecialchars($row['price']) .' PHP</p>';
-                echo '          </div>';
-                echo '          <div class="modal-footer">';
-                echo '              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>';
-                echo '          </div>';
-                echo '      </div>';
-                echo '  </div>';
+                echo '  </a>';
                 echo '</div>';
             }
         } else {
@@ -166,6 +143,7 @@
         ?>
     </div>
 </div>
+
 
 
 

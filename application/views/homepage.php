@@ -111,35 +111,6 @@
           <img class="images img-fluid w-75" src="<?= base_url('assets/pngs/standert.png') ?>" alt="image shown">
         </div>
       </div>
-      <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-3">
-        <div class="options p-3">
-          <h2 class="optionnames align-self-start">Boulevard Stellar Comfort</h2>
-          <img class="images img-fluid w-75" src="<?= base_url('assets/pngs/standert.png') ?>" alt="image shown">
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-3">
-        <div class="options p-3">
-          <h2 class="optionnames align-self-start">Carbon Titan Grip Brake Lever </h2>
-          <img class="images img-fluid w-75" src="<?= base_url('assets/pngs/standert.png') ?>" alt="image shown">
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-3">
-        <div class="options p-3">
-          <h2 class="optionnames align-self-start">Pembree AeroGrip 32A</h2>
-          <img class="images img-fluid w-75" src="<?= base_url('assets/pngs/standert.png') ?>" alt="image shown">
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-3">
-        <div class="options p-3">
-          <h2 class="optionnames align-self-start">Infinity Quantum Quill Stem</h2>
-          <img class="images img-fluid w-75" src="<?= base_url('assets/pngs/standert.png') ?>" alt="image shown">
-        </div>
-      </div>
-      <div class="text-center mt-4">
-        <a href="newreleasesspecs.php"> <u class="craftnow">View More</u></a>
-      </div> 
-    </div>
-  </section>
 
 -->
 
@@ -150,7 +121,7 @@
             foreach ($new_releases as $row) {
                 // Redirect link to newreleasesspecs.php with part_id as a parameter
                 echo '<a href="' . site_url('home/newreleasesspecs/' . $row['part_id']) . '" class="col-12 col-sm-6 col-md-6 col-lg-4 mt-3">';
-                echo '  <div class="options p-3" style="cursor: pointer;">';
+                echo '  <div class="options p-3 mb-3" style="cursor: pointer;">';
                 echo '      <h2 class="optionnames align-self-start">' . htmlspecialchars($row['model']) . '</h2>';
                 echo '      <img class="images img-fluid w-75" src="assets/pngs/asdasda.png" alt="Part image">';
                 echo '      <p class="card-text">Price: ' . htmlspecialchars($row['price']) . ' PHP</p>';
