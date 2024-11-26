@@ -49,9 +49,15 @@
         </div>
 
         <div class="col-lg-8 d-flex justify-content-center align-items-center">
-            <!-- Dynamically display the image -->
-            <img src="pngs/<?php echo htmlspecialchars($part['image']); ?>" class="img-fluid" alt="Bike Image">
-        </div>      
+        <img 
+            src="<?php echo base_url(htmlspecialchars($part['image_path'])); ?>" 
+            class="img-fluid" 
+            alt="Bike Image">
+        </div>
+
+</div>
+
+      
     </div>
 </section>
 
@@ -65,7 +71,10 @@
                     <a href="<?php echo site_url('home/newreleasesspecs/' . $row['part_id']); ?>" class="col-12 col-sm-6 col-md-6 col-lg-4 mt-3">
                         <div class="options p-3" style="cursor: pointer;">
                             <h2 class="optionnames align-self-start"><?php echo htmlspecialchars($row['model']); ?></h2>
-                            <img class="images img-fluid w-75" src="assets/pngs/asdasda.png" alt="Part image">
+                            <img 
+                                class="images img-fluid w-75" 
+                                src="<?php echo base_url(!empty($row['image_path']) ? htmlspecialchars($row['image_path']) : 'assets/images/default.png'); ?>" 
+                                azzlt="<?php echo htmlspecialchars($row['model']); ?> Image">
                             <p class="card-text">Price: <?php echo htmlspecialchars($row['price']); ?> PHP</p>
                             <p class="card-text">Weight: <?php echo htmlspecialchars($row['weight']); ?></p>
                         </div>
@@ -77,6 +86,8 @@
         </div>
     </div>
 </div>
+
+
 
 
 

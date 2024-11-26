@@ -18,22 +18,15 @@
 <?php $this->load->view('navbar'); ?>
 <!-- -------------------------------- TOP BRANDS -------------------------------- -->
 
-  <section class="newr container-fluid">
+<section class="newr container-fluid">
     <div class="row p-0 m-0">
         <div class="col-12 mt-4 ms-2">
             <h1 class="savedbuilds display-3">Top Brands</h1>
         </div>
     </div>
     <div class="row p-0 m-0">
-      <div class="col-2 mt-4">
-        <img src="<?= base_url('assets/pngs/trinx.png') ?>" alt="image here">
-        <button class="previous" data-bs-toggle="modal" data-bs-target="#specifications"> Previous</button>
-      </div>
-      <div class="col-8 d-flex justify-content-center">
-        <img class="savedbuildsimage img-fluid" src="<?= base_url('assets/pngs/asdasda.png') ?>" alt="image shown">
-      </div>
-      <div class="col-2 d-flex flex-column justify-content-end align-items-end pe-4">
-        <button class="next" data-bs-toggle="modal" data-bs-target="#specifications"> Next</button>
+      <div class="col-12 d-flex justify-content-center">
+        <img class="topbrandslogo img-fluid" src="<?= base_url('assets/pngs/asdasda.png') ?>" alt="image shown">
       </div>
     </div>
   </section>
@@ -78,9 +71,9 @@
   </div>
 
 <!-- -------------------------------- BRANDS & CATEGORIES -------------------------------- -->
-
-  <section class="newr container-fluid">
-    <div class="row p-0 m-0">
+<!--
+  <section class="newr container-fluid mb-5">
+    <div class="row p-0 mb">
       <div class="col-lg-4 mt-4 d-flex align-items-center">
         <p class="prebrands fs-3 mb-0 me-5 ms-1">Brands:</p>
         <button type="button" class="btn brandbtn dropdown-toggle fs-4" data-bs-toggle="dropdown" aria-expanded="false">
@@ -118,24 +111,25 @@
       </div>
     </div>
   </section>
-
+-->
 <!-- -------------------------------- CUSTOM BUILDS -------------------------------- -->
 
-<div class="newr container-fluid">
+<div class="newr container-fluid mt-5">
     <div class="row">
         <?php
         if (!empty($result)) { // Check if $result is not empty
             foreach ($result as $row) {
-                echo '<div class="col-lg-4 col-md-6 mb-4">';  
-                echo '  <a href="' . site_url('home/topbrandsspecs/' . $row['part_id']) . '" class="card h-100 text-decoration-none text-dark">'; // Make card clickable
-                echo '      <img class="card-img-top" src="assets/pngs/asdasda.png" alt="Part image">'; 
-                echo '      <div class="card-body">';
-                echo '          <h5 class="card-title">'. htmlspecialchars($row['model']) .'</h5>';
-                echo '          <p class="card-text">Price: '. htmlspecialchars($row['price']) .' PHP</p>';
-                echo '          <p class="card-text">Weight: '. htmlspecialchars($row['weight']) .'</p>';
+                // Redirect link to topbrandsspecs.php with part_id as a parameter
+                echo '<a href="' . site_url('home/topbrandsspecs/' . $row['part_id']) . '" class="col-12 col-sm-6 col-md-6 col-lg-4 mt-3 text-decoration-none text-dark">';
+                echo '  <div class="options p-3 mb-3" style="cursor: pointer;">';
+                echo '      <h5 class="model-name">' . htmlspecialchars($row['model']) . '</h5>';
+                echo '      <div class="image-container text-center">';
+                echo '          <img class="card-img-top img-fluid w-50" src="' . base_url(htmlspecialchars($row['image_path'])) . '" alt="' . htmlspecialchars($row['model']) . ' Image">';
                 echo '      </div>';
-                echo '  </a>';
-                echo '</div>';
+                echo '      <p class="card-text">Price: ' . htmlspecialchars($row['price']) . ' PHP</p>';
+                echo '      <p class="card-text">Weight: ' . htmlspecialchars($row['weight']) . '</p>';
+                echo '  </div>';
+                echo '</a>';
             }
         } else {
             echo '<p>No parts found</p>';
@@ -143,6 +137,7 @@
         ?>
     </div>
 </div>
+
 
 
 

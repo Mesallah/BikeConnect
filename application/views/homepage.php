@@ -114,27 +114,29 @@
 
 -->
 
-<div class="newr container-fluid">
-    <div class="row">
-        <?php
-        if (!empty($new_releases)) {
-            foreach ($new_releases as $row) {
-                // Redirect link to newreleasesspecs.php with part_id as a parameter
-                echo '<a href="' . site_url('home/newreleasesspecs/' . $row['part_id']) . '" class="col-12 col-sm-6 col-md-6 col-lg-4 mt-3">';
-                echo '  <div class="options p-3 mb-3" style="cursor: pointer;">';
-                echo '      <h2 class="optionnames align-self-start">' . htmlspecialchars($row['model']) . '</h2>';
-                echo '      <img class="images img-fluid w-75" src="assets/pngs/asdasda.png" alt="Part image">';
-                echo '      <p class="card-text">Price: ' . htmlspecialchars($row['price']) . ' PHP</p>';
-                echo '      <p class="card-text">Weight: ' . htmlspecialchars($row['weight']) . '</p>';
-                echo '  </div>';
-                echo '</a>';
+    <div class="newr container-fluid">
+        <div class="row">
+            <?php
+            if (!empty($new_releases)) {
+                foreach ($new_releases as $row) {
+                    // Redirect link to newreleasesspecs.php with part_id as a parameter
+                    echo '<a href="' . site_url('home/newreleasesspecs/' . $row['part_id']) . '" class="col-12 col-sm-6 col-md-6 col-lg-4 mt-3" style="text-decoration: none;">';
+                    echo '  <div class="options p-3 mb-3" style="cursor: pointer;">';
+                    echo '      <h5 class="model-name">' . htmlspecialchars($row['model']) . '</h5>';
+                    echo ' <div class="image-container" style="text-align: center;">';
+                    echo '      <img class="card-img-top img-fluid w-50" src="' . base_url(htmlspecialchars($row['image_path'])) . '" alt="' . htmlspecialchars($row['model']) . ' Image">';
+                    echo ' </div>';
+                    echo '      <p class="card-text">Price: ' . htmlspecialchars($row['price']) . ' PHP</p>';
+                    echo '      <p class="card-text">Weight: ' . htmlspecialchars($row['weight']) . '</p>';
+                    echo '  </div>';
+                    echo '</a>';
+                }
+            } else {
+                echo '<p>No new releases found</p>';
             }
-        } else {
-            echo '<p>No new releases found</p>';
-        }
-        ?>
+            ?>
+        </div>
     </div>
-</div>
 
 
 

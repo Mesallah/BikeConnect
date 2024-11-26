@@ -32,3 +32,12 @@
     background-color: rgb(241, 90, 36);
     color: black;
 }
+
+.content{
+    color: white;
+    font-family: 'Syne', sans-serif;
+}
+
+.detailtext{
+    color: rgb(241, 90, 36);
+}

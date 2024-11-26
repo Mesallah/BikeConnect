@@ -27,6 +27,10 @@ class Home extends CI_Controller {
         $part_details = $this->TopBrands_model->get_part_details($part_id);
         
         if ($part_details) {
+            // Add the path to the 3D model file to the data
+            $part_details['model_path'] = base_url('assets/models/' . $part_details['model_path']);
+ // Ensure 'model_filename' is the field in DB for the model path
+            
             // Load the view and pass the part details
             $this->load->view('Parts/topbrandsspecs', ['part' => $part_details]);
         } else {
@@ -34,6 +38,7 @@ class Home extends CI_Controller {
             show_404();
         }
     }
+    
     
 
     public function new_releases() {
@@ -54,8 +59,7 @@ class Home extends CI_Controller {
         if ($part_details) {
             // Fetch similar parts using the new method
             $similar_parts = $this->NewReleases_model->get_similar_parts_by_type(
-                $part_details['cmpnt_typeid'], 
-                $part_id
+                $part_details['cmpnt_typeid'],$part_id
             );
     
             // Pass both the part details and similar parts to the view

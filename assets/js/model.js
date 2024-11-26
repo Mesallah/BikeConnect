@@ -17,7 +17,7 @@ let totalWidth = 0;
 const loader = new GLTFLoader();
 
 // Load the initial model
-loadModel('models/bottombracket/bottombracket.glb');
+loadModel('models/bottombracket/SRAM_XG-1150.glb');
 
 // Instantiate a new renderer and set its size to the container
 const container = document.getElementById("container3D");
