@@ -7,6 +7,7 @@
 
 .savedbuildsspecs{
     background-color: rgb(16,16,16);
+    height: 100vh;
 }
 
 .savedpart, .savedname, .savedprice{
@@ -41,3 +42,4 @@
 .detailtext{
     color: rgb(241, 90, 36);
 }
+

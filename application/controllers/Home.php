@@ -22,23 +22,15 @@ class Home extends CI_Controller {
 
     public function topbrandsspecs($part_id) {
         $this->load->model('TopBrands_model');
-        
-        // Fetch the part details by its ID
         $part_details = $this->TopBrands_model->get_part_details($part_id);
-        
+    
         if ($part_details) {
-            // Add the path to the 3D model file to the data
-            $part_details['model_path'] = base_url('assets/models/' . $part_details['model_path']);
- // Ensure 'model_filename' is the field in DB for the model path
-            
-            // Load the view and pass the part details
+            // Pass the part details directly to the view
             $this->load->view('Parts/topbrandsspecs', ['part' => $part_details]);
         } else {
-            // If no part is found, show 404 error
             show_404();
         }
     }
-    
     
 
     public function new_releases() {

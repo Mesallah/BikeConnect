@@ -12,7 +12,7 @@
 <?php $this->load->view('navbar'); ?>
 
 <!-- Main Content -->
-<section class="savedbuildsspecs container-fluid">
+<section class="savedbuildsspecs">
     <div class="row ms-2 p-0 pt-5 m-0">
         <!-- Bike Details Section -->
         <div class="col-lg-4">
@@ -34,11 +34,8 @@
 
         <!-- Image Section -->
         <div class="col-lg-8 d-flex justify-content-center align-items-center">
-        <img 
-            src="<?php echo base_url(htmlspecialchars($part['image_path'])); ?>" 
-            class="img-fluid" 
-            alt="Bike Image">
-    </div>
+        <img src="<?php echo base_url(htmlspecialchars($part['image_path'])); ?>" class="img-fluid w-50" alt="Bike Image">
+        </div>
 </section>
 
 <!-- Popper.js and Bootstrap JS -->
